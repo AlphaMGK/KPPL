@@ -1,0 +1,79 @@
+<html>
+    <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+
+    var directionDisplay;
+    var map;
+
+
+function initialize() {
+    directionsDisplay = new google.maps.DirectionsRenderer();
+    var myOptions = {
+        zoom:12,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        center: {lat: -7.2783, lng: 112.7921}
+    }
+
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    directionsDisplay.setMap(map);
+    }
+
+
+    var directionsService = new google.maps.DirectionsService();
+
+    function calcRoute() {
+        var start = document.getElementById("start").value;
+        var end = document.getElementById("end").value;
+        var distanceInput = document.getElementById("distance");
+
+        var request = {
+            origin:start,
+            destination:end,
+            travelMode: google.maps.DirectionsTravelMode.DRIVING
+        };
+
+        directionsService.route(request, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(response);
+                distanceInput.value = response.routes[0].legs[0].distance.value / 1000;
+            }
+        });
+    }
+    </script>
+
+    <title>Distance Calculator</title>
+
+    <style type="text/css">
+
+            body {
+                font-family:Helvetica, Arial;
+            }
+            #map_canvas {
+                height: 50%;
+            }
+    </style>
+    </head>
+    <body>
+
+    <body onload="initialize()">
+    <p>Enter your current location and desired destination to get the distance</p>
+        <div>
+            <p>
+                <label for="start">Start: </label>
+                <input type="text" name="start" id="start" />
+
+                <label for="end">End: </label>
+                <input type="text" name="end" id="end" />
+
+                <input type="submit" value="Calculate Route" onclick="calcRoute()" />
+            </p>
+            <p>
+                <label for="distance">Distance (km): </label>
+                <input type="text" name="distance" id="distance" readonly="true" />
+            </p>
+        </div>
+        <div id="map_canvas"></div>
+    </body>
+</html>
