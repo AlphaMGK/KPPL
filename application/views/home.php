@@ -80,35 +80,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="row">
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
-												<h6><a href="<?php echo base_url().'index.php/MyController/show_paket_kon';  ?>">Konvensional</a></h6>
-												<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_1';  ?>">Paket 1 Tombak</a></li>
-												<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_2';  ?>">Paket 2 Tombak</a></li>
-												<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_3';  ?>">Paket 3 Tombak</a></li>
+												<h6><a href="<?php echo base_url().'index.php/CustControl/show_paket/konvensional';  ?>">Konvensional</a></h6>
+												<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/kon_1';  ?>">Paket 1 Tombak</a></li>
+												<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/kon_2';  ?>">Paket 2 Tombak</a></li>
+												<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/kon_3';  ?>">Paket 3 Tombak</a></li>
 
 											</ul>
 										</div>
 										<div class="col-sm-8">
 												<ul class="multi-column-dropdown">
-													<h6><a href="<?php echo base_url().'index.php/MyController/show_paket_el';  ?>">Elektrostatis</a></h6>
+													<h6><a href="<?php echo base_url().'index.php/CustControl/show_paket/elektrostatis';  ?>">Elektrostatis</a></h6>
 													<div class="col-sm-6">
 													<ul>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent35';?>">Paket GENT T35 35 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent175';?>">Paket GENT T75 75 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent150';?> ">Paket GENT T150 150 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat1';?>">Paket GUARDIAN Tipe LPI CAT 1</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat2';?>">Paket GUARDIAN Tipe LPI CAT 2</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat3';?>">Paket GUARDIAN Tipe LPI CAT 3</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent35';?>">Paket GENT T35 35 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent175';?>">Paket GENT T75 75 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent150';?> ">Paket GENT T150 150 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_guardianCat1';?>">Paket GUARDIAN Tipe LPI CAT 1</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_guardianCat2';?>">Paket GUARDIAN Tipe LPI CAT 2</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_guardianCat3';?>">Paket GUARDIAN Tipe LPI CAT 3</a></li>
 													</ul>
 													</div>
 
 													<div class="col-sm-6">
 													<ul>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_kurn85';?>">Paket KURN 85 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_kurn150';?> ">Paket KURN 150 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_kurn85';?>">Paket KURN 85 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_kurn150';?> ">Paket KURN 150 Meter</a></li>
 
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_thomas';?>">Paket THOMAS 100 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_viking70';?>">Paket VIKING V3 70 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_viking120';?>">Paket VIKING V6 120 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_thomas';?>">Paket THOMAS 100 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_viking70';?>">Paket VIKING V3 70 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_viking120';?>">Paket VIKING V6 120 Meter</a></li>
 													</ul>
 													</div>
 												</ul>
@@ -133,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<?php echo $this->session->userdata('first_name') ." ". $this->session->userdata('last_name'); ?></div>
 							</h3>
 						</a>
-						<p><a href="<?php echo base_url().'index.php/MyController/logout' ;?>" class="simpleCart_empty"><?php echo $this->session->userdata('logout') ;?></a></p>
+						<p><a href="<?php echo base_url().'index.php/custManager/logout' ;?>" class="simpleCart_empty"><?php echo $this->session->userdata('logout') ;?></a></p>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -188,7 +188,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="grid">
 						<figure class="effect-julia">
 							<img src="<?php echo base_url('images/a1.jpg');?>" alt=" " class="img-responsive" />
-							<a href="<?php echo base_url().'index.php/MyController/show_paket_kon';  ?>">
+							<a href="<?php echo base_url().'index.php/CustControl/show_paket_kon';  ?>">
 							<figcaption>
 								<h3>Paket <span>Tombak</span><i> Konvensional</i></h3>
 								<div>
@@ -203,12 +203,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="banner-bottom-grid-left1 animated wow slideInUp" data-wow-delay=".5s">
 					<div class="banner-bottom-grid-left-grid left1-grid grid-left-grid1">
-						<a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_thomas';?>">
+						<a href="<?php echo base_url().'index.php/CustControl/show_detail/el_thomas';?>">
 						<div class="banner-bottom-grid-left-grid1">
 							<img src="<?php echo base_url('images/a4.jpg');?>"  alt=" " class="img-responsive" />
 						</div>
 						</a>
-						<a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_thomas';?>">
+						<a href="<?php echo base_url().'index.php/CustControl/show_detail/el_thomas';?>">
 							<div class="banner-bottom-grid-left1-position">
 								<div class="banner-bottom-grid-left1-pos1">
 								<p><font color = "orange">Paket Thomas</p>
@@ -218,11 +218,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="banner-bottom-grid-left-grid left1-grid grid-left-grid1">
 						<div class="banner-bottom-grid-left-grid1">
-							<a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent35';?>">
+							<a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent35';?>">
 							<img src="<?php echo base_url('images/a5.jpg');?>"  alt=" " class="img-responsive" />
 							</a>
 						</div>
-						<a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent35';?>">
+						<a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent35';?>">
 						<div class="banner-bottom-grid-left1-position">
 							<div class="banner-bottom-grid-left1-pos1">
 								<p><font color = "orange">Paket Gent T35 Meter</p>
@@ -234,11 +234,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="banner-bottom-grid-right animated wow slideInRight" data-wow-delay=".5s">
 					<div class="banner-bottom-grid-left-grid grid-left-grid1">
 						<div class="banner-bottom-grid-left-grid1">
-							<a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_viking70';?>">
+							<a href="<?php echo base_url().'index.php/CustControl/show_detail/el_viking70';?>">
 								<img src="<?php echo base_url('images/a3.jpg');?>" alt=" " class="img-responsive" />
 							</a>
 						</div>
-						<a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_viking70';?>">
+						<a href="<?php echo base_url().'index.php/CustControl/show_detail/el_viking70';?>">
 						<div class="grid-left-grid1-pos">
 							<p>Paket VIKING <span>V3 70 Meter</span></p>
 						</div>

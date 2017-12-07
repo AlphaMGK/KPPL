@@ -1,3 +1,4 @@
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
@@ -74,35 +75,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="row">
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
-												<h6><a href="<?php echo base_url().'index.php/MyController/show_paket_kon';  ?>">Konvensional</a></h6>
-												<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_1';  ?>">Paket 1 Tombak</a></li>
-												<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_2';  ?>">Paket 2 Tombak</a></li>
-												<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_3';  ?>">Paket 3 Tombak</a></li>
+												<h6><a href="<?php echo base_url().'index.php/CustControl/show_paket/konvensional';  ?>">Konvensional</a></h6>
+												<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/kon_1';  ?>">Paket 1 Tombak</a></li>
+												<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/kon_2';  ?>">Paket 2 Tombak</a></li>
+												<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/kon_3';  ?>">Paket 3 Tombak</a></li>
 
 											</ul>
 										</div>
 										<div class="col-sm-8">
 												<ul class="multi-column-dropdown">
-													<h6><a href="<?php echo base_url().'index.php/MyController/show_paket_el';  ?>">Elektrostatis</a></h6>
+													<h6><a href="<?php echo base_url().'index.php/CustControl/show_paket/elektrostatis';  ?>">Elektrostatis</a></h6>
 													<div class="col-sm-6">
 													<ul>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent35';?>">Paket GENT T35 35 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent175';?>">Paket GENT T75 75 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent150';?> ">Paket GENT T150 150 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat1';?>">Paket GUARDIAN Tipe LPI CAT 1</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat2';?>">Paket GUARDIAN Tipe LPI CAT 2</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat3';?>">Paket GUARDIAN Tipe LPI CAT 3</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent35';?>">Paket GENT T35 35 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent175';?>">Paket GENT T75 75 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent150';?> ">Paket GENT T150 150 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_guardianCat1';?>">Paket GUARDIAN Tipe LPI CAT 1</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_guardianCat2';?>">Paket GUARDIAN Tipe LPI CAT 2</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_guardianCat3';?>">Paket GUARDIAN Tipe LPI CAT 3</a></li>
 													</ul>
 													</div>
 
 													<div class="col-sm-6">
 													<ul>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_kurn85';?>">Paket KURN 85 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_kurn150';?> ">Paket KURN 150 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_kurn85';?>">Paket KURN 85 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_kurn150';?> ">Paket KURN 150 Meter</a></li>
 
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_thomas';?>">Paket THOMAS 100 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_viking70';?>">Paket VIKING V3 70 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_viking120';?>">Paket VIKING V6 120 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_thomas';?>">Paket THOMAS 100 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_viking70';?>">Paket VIKING V3 70 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_viking120';?>">Paket VIKING V6 120 Meter</a></li>
 													</ul>
 													</div>
 												</ul>
@@ -127,7 +128,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<?php echo $this->session->userdata('first_name') ." ". $this->session->userdata('last_name'); ?></div>
 							</h3>
 						</a>
-						<p><a href="<?php echo base_url().'index.php/MyController/logout' ;?>" class="simpleCart_empty"><?php echo $this->session->userdata('logout') ;?></a></p>
+						<p><a href="<?php echo base_url().'index.php/custManager/logout' ;?>" class="simpleCart_empty"><?php echo $this->session->userdata('logout') ;?></a></p>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -153,7 +154,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<p class="est">Silahkan tuliskan kebutuhan dan kriteria bangunan anda yang akan dipasang dengan paket yang tersedia.</p>
 			<div class="mail-grids">
 				<div class="col-md-8 mail-grid-left animated wow slideInLeft" data-wow-delay=".5s">
-					<form action="<?php echo base_url().'index.php/MyController/do_order/'.$kategori.'/'.$id?>" method="post" enctype="multipart/form-data">
+					<form action="<?php echo base_url().'index.php/CustControl/do_order/'.$kategori.'/'.$id?>" method="post" enctype="multipart/form-data">
 						<input type="text" value="Luas Bangunan.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Luas Bangunan..';}" name="luas" required="">
 						<br>
 						<br>

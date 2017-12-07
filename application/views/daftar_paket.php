@@ -11,7 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Panah Cakrawala || Elektrostatis</title>
+<title>Panah Cakrawala || Konvensional</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -73,43 +73,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li class="active" > <a href="<?php echo base_url(); ?>" class="act">Beranda</a></li>
+							<li  > <a href="<?php echo base_url(); ?>" class="act">Beranda</a></li>
 							<!-- Mega Menu -->
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" class="active">Penangkal Petir <b class="caret"></b></a>
+								<a class="active" href="#" class="dropdown-toggle" data-toggle="dropdown">Penangkal Petir <b class="caret"></b></a>
 								<ul class="dropdown-menu multi-column columns-3">
 									<div class="row">
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
-												<h6><a href="<?php echo base_url().'index.php/MyController/show_paket_kon';  ?>">Konvensional</a></h6>
-												<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_1';  ?>">Paket 1 Tombak</a></li>
-												<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_2';  ?>">Paket 2 Tombak</a></li>
-												<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_3';  ?>">Paket 3 Tombak</a></li>
+												<h6><a href="<?php echo base_url().'index.php/CustControl/show_paket_kon/konvensional';  ?>">Konvensional</a></h6>
+												<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/kon_1';  ?>">Paket 1 Tombak</a></li>
+												<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/kon_2';  ?>">Paket 2 Tombak</a></li>
+												<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/kon_3';  ?>">Paket 3 Tombak</a></li>
 
 											</ul>
 										</div>
 										<div class="col-sm-8">
 												<ul class="multi-column-dropdown">
-													<h6><a href="<?php echo base_url().'index.php/MyController/show_paket_el';  ?>">Elektrostatis</a></h6>
+													<h6><a href="<?php echo base_url().'index.php/CustControl/show_paket/elektrostatis';  ?>">Elektrostatis</a></h6>
 													<div class="col-sm-6">
 													<ul>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent35';?>">Paket GENT T35 35 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent175';?>">Paket GENT T75 75 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent150';?> ">Paket GENT T150 150 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat1';?>">Paket GUARDIAN Tipe LPI CAT 1</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat2';?>">Paket GUARDIAN Tipe LPI CAT 2</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat3';?>">Paket GUARDIAN Tipe LPI CAT 3</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent35';?>">Paket GENT T35 35 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent175';?>">Paket GENT T75 75 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent150';?> ">Paket GENT T150 150 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_guardianCat1';?>">Paket GUARDIAN Tipe LPI CAT 1</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_guardianCat2';?>">Paket GUARDIAN Tipe LPI CAT 2</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_guardianCat3';?>">Paket GUARDIAN Tipe LPI CAT 3</a></li>
 													</ul>
 													</div>
 
 													<div class="col-sm-6">
 													<ul>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_kurn85';?>">Paket KURN 85 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_kurn150';?> ">Paket KURN 150 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_kurn85';?>">Paket KURN 85 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_kurn150';?> ">Paket KURN 150 Meter</a></li>
 
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_thomas';?>">Paket THOMAS 100 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_viking70';?>">Paket VIKING V3 70 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_viking120';?>">Paket VIKING V6 120 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_thomas';?>">Paket THOMAS 100 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_viking70';?>">Paket VIKING V3 70 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_viking120';?>">Paket VIKING V6 120 Meter</a></li>
 													</ul>
 													</div>
 												</ul>
@@ -134,7 +134,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<?php echo $this->session->userdata('first_name') ." ". $this->session->userdata('last_name'); ?></div>
 							</h3>
 						</a>
-						<p><a href="<?php echo base_url().'index.php/MyController/logout' ;?>" class="simpleCart_empty"><?php echo $this->session->userdata('logout') ;?></a></p>
+						<p><a href="<?php echo base_url().'index.php/custManager/logout' ;?>" class="simpleCart_empty"><?php echo $this->session->userdata('logout') ;?></a></p>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -142,13 +142,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
-<!-- //header -->
-<!-- breadcrumbs -->
+<!-- //header --><!-- breadcrumbs -->
 	<div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
 				<li><a href="<?php echo base_url(); ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Paket Elektrostatis</li>
+				<li class="active">Paket Konvensional</li>
 			</ol>
 		</div>
 	</div>
@@ -156,34 +155,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="col-md-4 products-left">
 				<div class="filter-price animated wow slideInUp" data-wow-delay=".5s">
-					<h3>Paket Penangkal Petir Elektrostatis</h3>
+					<h3>Paket Penangkal Petir Konvensional</h3>
 				</div>
 				<div class="categories animated wow slideInUp" data-wow-delay=".5s">
 					<h3>Produk Kami</h3>
 					<ul class="cate">
-						<li><a href="<?php echo base_url().'index.php/MyController/show_paket_kon';?>">Penangkal Petir Konvensional</a></li>
+					<?php foreach($paket as $pkt){ ?>
+
+						<li><a href="<?php echo base_url().'index.php/CustControl/show_paket/show_paket/konvensional';?>">Penangkal Petir Konvensional</a></li>
 							<ul>
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_1';?>">Paket 1 Tombak</a></li>
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_2';?>">Paket 2 Tombak</a></li>
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_3';?>">Paket 3 Tombak</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/kon_1';?>">Paket 1 Tombak</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/kon_2';?>">Paket 2 Tombak</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/kon_3';?>">Paket 3 Tombak</a></li>
 
 							</ul>
-						<li><a href="<?php echo base_url().'index.php/MyController/show_paket_el';?>">Penangkal Petir Elektrostatis</a></li>
+						<li><a href="<?php echo base_url().'index.php/CustControl/show_paket_el';?>">Penangkal Petir Elektrostatis</a></li>
 							<ul>
 
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent35';?>">Paket GENT T35 35 Meter</a></li>
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent75';?>">Paket GENT T75 75 Meter</a></li>
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent150';?>">Paket GENT T150 150 Meter</a></li>
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat1';?>">Paket GUARDIAN Tipe LPI CAT 1</a></li>
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat2';?>">Paket GUARDIAN Tipe LPI CAT 2</a></li>
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat3';?>">Paket GUARDIAN Tipe LPI CAT 3</a></li>
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_kurn85';?>">Paket KURN 85 Meter</a></li>
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_kurn150';?> ">Paket KURN 150 Meter</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent35';?>">Paket GENT T35 35 Meter</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent75';?>">Paket GENT T75 75 Meter</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent150';?>">Paket GENT T150 150 Meter</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_guardianCat1';?>">Paket GUARDIAN Tipe LPI CAT 1</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_guardianCat2';?>">Paket GUARDIAN Tipe LPI CAT 2</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_guardianCat3';?>">Paket GUARDIAN Tipe LPI CAT 3</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_kurn85';?>">Paket KURN 85 Meter</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_kurn150';?> ">Paket KURN 150 Meter</a></li>
 
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_thomas';?>">Paket THOMAS 100 Meter</a></li>
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_viking70';?>">Paket VIKING V3 70 Meter</a></li>
-								<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_viking120';?>">Paket VIKING V6 120 Meter</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_thomas';?>">Paket THOMAS 100 Meter</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_viking70';?>">Paket VIKING V3 70 Meter</a></li>
+								<li><a href="<?php echo base_url().'index.php/CustControl/show_detail/el_viking120';?>">Paket VIKING V6 120 Meter</a></li>
 							</ul>
+						<?php } ?>
 					</ul>
 				</div>
 			</div>
@@ -192,11 +194,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="products-right-grids-position animated wow slideInRight" data-wow-delay=".5s">
 						<img src="<?php echo base_url('images/petir.jpg');?>" alt=" " class="img-responsive" />
 						<div class="products-right-grids-position1">
-							<h4>Elektrostatis</h4>
-							<p>Penangkal petir jenis ini menggunakan cara yang hampir sama tetapi
-								tidak memasukkan zat beradioaktive yaitu dengan sistem Early Streamer emisions ( ESE )
-								penangkal petir ini juga mampu bekerja dengan sangat effektif pula dengan memanfaatkan
-								dan mengumpulkan energi awan yang lewat diatas perlindungan kemudian memancarkannya keatas. </p>
+							<h4>Konvensional</h4>
+							<p>Penangkal petir dengan bentuk menyerupai cone atau batang
+								logam dengan ujung runcing biasanya cocok untuk rumah tinggal ini dsebabkan,
+								Perlindungan penangkal petir konvensonal hanya 45 derajat jadi tidak memerlukan area perlindungan yang besar,
+								akan tetapi banyak juga tempat industri, pabrik yang masih memakai jenis ini dengan pertimbangan jauh lebih murah.</p>
 						</div>
 					</div>
 				</div>
@@ -208,13 +210,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="new-collections-grid1-image">
 								<a href="single.html" class="product-image"><img src="<?php echo base_url('images/'.$pkt->gambar_pkt);?>" alt=" " class="img-responsive"></a>
 								<div  class="new-collections-grid1-image-pos products-right-grids-pos">
-									<a href="<?php echo base_url().'index.php/MyController/show_detail_el/'.$pkt->id_pkt; ?>">Detail Paket</a>
+									<a href="<?php echo base_url().'index.php/CustControl/show_detail/'.$pkt->id_pkt; ?>">Detail Paket</a>
 								</div>
 							</div>
-							<h4><a href="single.html"><?php echo $pkt->nama_pkt; ?></a></h4>
-							<p><?php echo $pkt->kategori_pkt; ?></p>
+							<h4><a href="single.html"><?php echo $pkt->nama_pkt ?></a></h4>
+							<p><?php echo $pkt->kategori_pkt ?></p>
 							<div class="simpleCart_shelfItem products-right-grid1-add-cart">
-								<p><span class="item_price"><?php echo $pkt->harga_pkt ?></span><a class="item_add" href="<?php echo base_url().'index.php/MyController/show_order/'.$pkt->kategori_pkt.'/'.$pkt->id_pkt ;?>">order</a></p>
+								<p><span class="item_price"><?php echo "Rp. ".number_format($pkt->harga_pkt) ?></span><a class="item_add" href="<?php echo base_url().'index.php/CustControl/show_order/'.$pkt->kategori_pkt.'/'.$pkt->id_pkt ;?>">order</a></p>
 							</div>
 						</div>
 					</div>
@@ -229,8 +231,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 
 <!-- //breadcrumbs -->
-<section id="footer">
 <!-- footer -->
+<section id="footer">
 <div class="footer">
 	<div class="container">
 		<div class="footer-grids">

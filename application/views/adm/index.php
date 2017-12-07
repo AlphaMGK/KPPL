@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a tabindex="-1" href="<?php echo base_url().'index.php/admControl/logout';?>">Logout</a>
+                                        <a tabindex="-1" href="<?php echo base_url().'index.php/admManager/logout';?>">Logout</a>
                                     </li>
                                 </ul>
                             </li>
@@ -49,9 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li>
-                                        <a tabindex="-1" href="<?php echo base_url().'index.php/admControl/listUsers';?>">User List</a>
-                                    </li>
+                                    
                                     <!--<li>
                                         <a tabindex="-1" href="#">Search</a>
                                     </li>
@@ -66,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a tabindex="-1" href="<?php echo base_url().'index.php/admControl/listOrder';?>">Order List</a>
+                                        <a tabindex="-1" href="<?php echo base_url().'index.php/admControl/showListOrder';?>">Order List</a>
                                     </li>
                                     <!--<li>
                                         <a tabindex="-1" href="#">Search</a>

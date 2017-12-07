@@ -6,13 +6,10 @@ class AdmMod extends CI_Model {
 		return $this->db->get('users');
 	}
 
-	function get_order(){
-		$sql = "SELECT * FROM order_paket ORDER BY tanggal_order, validasi";
-		return $this->db->query($sql);
-	}
+	
 
 	function login_authen($email, $password){
-		$sql = "select * from admins where email = '$email' and password = '$password'";
+		$sql = "select * from admins where email_admin = '$email' and password = '$password'";
 		$query = $this->db->query($sql);
 
 		if($query->num_rows()==1){
@@ -24,7 +21,7 @@ class AdmMod extends CI_Model {
 	}
 	
 	function authen_admin($email){
-		$sql = "select authentication from admins where email = '$email'";
+		$sql = "select authentication from admins where email_admin = '$email'";
 		$query = $this->db->query($sql);
 
 		if ($query->num_rows() == 1) {
@@ -36,7 +33,7 @@ class AdmMod extends CI_Model {
 	}
 	
 	function wrong_password($email,$value){
-		$sql = "update admins set authentication = $value where email = '$email'";
+		$sql = "update admins set authentication = $value where email_admin = '$email'";
 		$query = $this->db->query($sql);
 	}
 
@@ -45,12 +42,6 @@ class AdmMod extends CI_Model {
 		return $data->result_array();
 
 	}
-	function delete_order($where){
-		$this->db->delete('order_paket',$where);
-	}
-
-	function validate($table,$where,$data){
-		$this->db->update($table,$data,$where);
-	}
+	
 }
 ?>

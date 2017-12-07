@@ -77,35 +77,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="row">
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
-												<h6><a href="<?php echo base_url().'index.php/MyController/show_paket_kon';  ?>">Konvensional</a></h6>
-												<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_1';  ?>">Paket 1 Tombak</a></li>
-												<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_2';  ?>">Paket 2 Tombak</a></li>
-												<li><a href="<?php echo base_url().'index.php/MyController/show_detail_kon/kon_3';  ?>">Paket 3 Tombak</a></li>
+												<h6><a href="<?php echo base_url().'index.php/CustControl/show_paket_kon';  ?>">Konvensional</a></h6>
+												<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_kon/kon_1';  ?>">Paket 1 Tombak</a></li>
+												<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_kon/kon_2';  ?>">Paket 2 Tombak</a></li>
+												<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_kon/kon_3';  ?>">Paket 3 Tombak</a></li>
 
 											</ul>
 										</div>
 										<div class="col-sm-8">
 												<ul class="multi-column-dropdown">
-													<h6><a href="<?php echo base_url().'index.php/MyController/show_paket_el';  ?>">Elektrostatis</a></h6>
+													<h6><a href="<?php echo base_url().'index.php/CustControl/show_paket_el';  ?>">Elektrostatis</a></h6>
 													<div class="col-sm-6">
 													<ul>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent35';?>">Paket GENT T35 35 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent175';?>">Paket GENT T75 75 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_gent150';?> ">Paket GENT T150 150 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat1';?>">Paket GUARDIAN Tipe LPI CAT 1</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat2';?>">Paket GUARDIAN Tipe LPI CAT 2</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_guardianCat3';?>">Paket GUARDIAN Tipe LPI CAT 3</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_el/el_gent35';?>">Paket GENT T35 35 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_el/el_gent175';?>">Paket GENT T75 75 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_el/el_gent150';?> ">Paket GENT T150 150 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_el/el_guardianCat1';?>">Paket GUARDIAN Tipe LPI CAT 1</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_el/el_guardianCat2';?>">Paket GUARDIAN Tipe LPI CAT 2</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_el/el_guardianCat3';?>">Paket GUARDIAN Tipe LPI CAT 3</a></li>
 													</ul>
 													</div>
 
 													<div class="col-sm-6">
 													<ul>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_kurn85';?>">Paket KURN 85 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_kurn150';?> ">Paket KURN 150 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_el/el_kurn85';?>">Paket KURN 85 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_el/el_kurn150';?> ">Paket KURN 150 Meter</a></li>
 
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_thomas';?>">Paket THOMAS 100 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_viking70';?>">Paket VIKING V3 70 Meter</a></li>
-													<li><a href="<?php echo base_url().'index.php/MyController/show_detail_el/el_viking120';?>">Paket VIKING V6 120 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_el/el_thomas';?>">Paket THOMAS 100 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_el/el_viking70';?>">Paket VIKING V3 70 Meter</a></li>
+													<li><a href="<?php echo base_url().'index.php/CustControl/show_detail_el/el_viking120';?>">Paket VIKING V6 120 Meter</a></li>
 													</ul>
 													</div>
 												</ul>
@@ -130,7 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<?php echo $this->session->userdata('first_name') ." ". $this->session->userdata('last_name'); ?></div>
 							</h3>
 						</a>
-						<p><a href="<?php echo base_url().'index.php/MyController/logout' ;?>" class="simpleCart_empty"><?php echo $this->session->userdata('logout') ;?></a></p>
+						<p><a href="<?php echo base_url().'index.php/custManager/logout' ;?>" class="simpleCart_empty"><?php echo $this->session->userdata('logout') ;?></a></p>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -155,7 +155,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Login Form</h3>
 			<p class="est animated wow zoomIn" data-wow-delay=".5s" style="color: #d8703f"><?php echo $err_message;?></p>
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
-				<form method="post" action="<?php echo base_url().'index.php/MyController/do_login'?>">
+				<form method="post" action="<?php echo base_url().'index.php/custManager/do_login'?>">
 					<input type="email" placeholder="Email Address" name="email" required=" " >
 					<input type="password" placeholder="Password" name="password" required=" " >
 
@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</form>
 			</div>
 			<h4 class="animated wow slideInUp" data-wow-delay=".5s">Belum Punya Akun</h4>
-			<p class="animated wow slideInUp" data-wow-delay=".5s"><a href="<?php echo base_url().'index.php/MyController/register'?>">Daftar Di Sini</a> Kembali Ke <a href="<?php echo base_url(); ?>">Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></p>
+			<p class="animated wow slideInUp" data-wow-delay=".5s"><a href="<?php echo base_url().'index.php/custManager/register'?>">Daftar Di Sini</a> Kembali Ke <a href="<?php echo base_url(); ?>">Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></p>
 		</div>
 	</div>
 <!-- //login -->

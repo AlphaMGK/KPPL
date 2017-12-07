@@ -36,16 +36,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a tabindex="-1" href="<?php echo base_url().'index.php/admControl/logout';?>">Logout</a>
+                                        <a tabindex="-1" href="<?php echo base_url().'index.php/admManager/logout';?>">Logout</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                         <ul class="nav">
                             
-                            <li>
-                                <a href="<?php echo base_url().'index.php/admControl/listUsers';?>" role="button"> Users</a>
-                            </li>
                             <li class="active">
                                 <a href="#" role="button" >Order </i></a>
                                 
@@ -104,7 +101,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 if($ord->validasi==0){
                                                    
 
-                                                    echo "<a href=".base_url().'index.php/admControl/validasi/'.$ord->no_order."><button class='btn btn-primary'>Belum</button></a>";
+                                                    echo "<a href=".base_url().'index.php/admControl/validasiOrder/'.$ord->no_order."><button class='btn btn-primary'>Belum</button></a>";
                                                 }else{
                                                     
                                                     echo "<a href=''><button class='btn'>Sudah</button></a>";
@@ -113,7 +110,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                           ?> 
 
                                           </td>
-                                          <td> <a href="<?php echo base_url().'index.php/admControl/delete/'.$ord->no_order;?>"><button  class='btn btn-primary'>Delete</button></a></td>
+                                          <td> <a href="<?php echo base_url().'index.php/admControl/deleteOrder/'.$ord->no_order;?>"><button  class='btn btn-primary'>Delete</button></a></td>
 						                </tr>
                                         <?php } ?>
 						              </tbody>

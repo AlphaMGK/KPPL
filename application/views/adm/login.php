@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <body id="login">
     <div class="container">
 
-      <form class="form-signin" method="post" action="<?php echo base_url().'index.php/admLogin/do_login';?>">
+      <form class="form-signin" method="post" action="<?php echo base_url().'index.php/admManager/do_login';?>">
         <h2 class="form-signin-heading">Please sign in</h2>
         <input type="text" class="input-block-level" placeholder="Email address" name="adm_mail">
         <input type="password" class="input-block-level" placeholder="Password" name="adm_password">
