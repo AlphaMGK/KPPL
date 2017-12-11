@@ -23,6 +23,21 @@ class Customer extends CI_Model {
 			return false;
 		}
 	}
+
+
+	function cek_email($email){
+		//$this->db->select('*');
+		$sql = "select * from users where email = '$email'";
+		$query = $this->db->query($sql);
+
+		if($query->num_rows()==1){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+
 	function authen_user($email){
 		$sql = "select authentication from users where email = '$email'";
 		$query = $this->db->query($sql);
@@ -37,6 +52,12 @@ class Customer extends CI_Model {
 		$sql = "update users set authentication = $value where email = '$email'";
 		$query = $this->db->query($sql);
 	}
+
+	function update_password($table,$where,$data){
+			
+		$this->db->update($table,$data,$where);
+
+		}
 	
 }
 

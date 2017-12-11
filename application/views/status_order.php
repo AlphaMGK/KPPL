@@ -4,44 +4,41 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Panah Cakrawala || Beranda</title>
+<title>Panah Cakrawala || Status Order</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Best Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+<meta name="keywords" content="Best Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="<?php echo base_url('css/bootstrap.css');?>" rel="stylesheet" type="text/css" media="all" />
-<link href="<?php echo base_url('css/style.css');?>" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo base_url('css/bootstrap.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo base_url('css/style.css'); ?>" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
-<script src="<?php echo base_url('js/jquery.min.js');?>"></script>
+<script src="<?php echo base_url('js/jquery.min.js'); ?>"></script>
 <!-- //js -->
 <!-- cart -->
-	<script src="<?php echo base_url('js/simpleCart.min.js');?>"> </script>
+	<script src="<?php echo base_url('js/simpleCart.min.js'); ?>"> </script>
 <!-- cart -->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/jquery-ui.css');?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/jquery-ui.css'); ?>">
 <!-- for bootstrap working -->
-	<script type="text/javascript" src="<?php echo base_url('js/bootstrap-3.1.1.min.js');?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('js/bootstrap-3.1.1.min.js'); ?>"></script>
 <!-- //for bootstrap working -->
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='<?php echo base_url('//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'); ?>' rel='stylesheet' type='text/css'>
+<link href='<?php echo base_url('//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic'); ?>' rel='stylesheet' type='text/css'>
 <!-- animation-effect -->
-<link href="<?php echo base_url('css/animate.min.css');?>" rel="stylesheet">
-<script src="<?php echo base_url('js/wow.min.js');?>"></script>
+<link href="<?php echo base_url('css/animate.min.css'); ?>" rel="stylesheet"> 
+<script src="<?php echo base_url('js/wow.min.js'); ?>"></script>
 <script>
  new WOW().init();
 </script>
 <!-- //animation-effect -->
 </head>
-
+	
 <body>
 <!-- header -->
 	<div class="header">
@@ -72,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li class="active" > <a href="<?php echo base_url(); ?>" class="act">Beranda</a></li>
+							<li > <a href="<?php echo base_url(); ?>" class="act">Beranda</a></li>
 							<!-- Mega Menu -->
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Penangkal Petir <b class="caret"></b></a>
@@ -127,7 +124,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				<div class="header-right">
 					<div class="box_1">
-						<a href="<?php echo base_url().'index.php/custManager/login';?>">
+						<a href="#">
 							<h3> 
 								<div >
 									
@@ -147,9 +144,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</h3>
 						</a>
 						<p><a href="<?php echo base_url().'index.php/custManager/logout' ;?>" class="simpleCart_empty"><?php echo $this->session->userdata('logout') ;?></a></p>
-						<a href="<?php echo base_url().'index.php/custManager/login';?>">
-						<h4><?php if (!isset($this->session->userdata['userid'])) echo 'Login' ?></h4>
-						</a>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -158,118 +152,71 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 <!-- //header -->
-<!-- banner -->
-	<div class="banner">
+<!-- breadcrumbs -->
+	<div class="breadcrumbs">
 		<div class="container">
-			<div class="banner-info animated wow zoomIn" data-wow-delay=".5s">
-				<h3>Panah Cakrawala</h3>
-				<h4>Tersebar di <span>13++ <i>Kota</i></span></h4>
-				<div class="wmuSlider example1">
-					<div class="wmuSliderWrapper">
-						<article style="position: absolute; width: 100%; opacity: 0;">
-							<div class="banner-wrap">
-								<div class="banner-info1">
-									<p>Memiliki Tenaga Yang Berpengalaman</p>
-								</div>
-							</div>
-						</article>
-						<article style="position: absolute; width: 100%; opacity: 0;">
-							<div class="banner-wrap">
-								<div class="banner-info1">
-									<p>Memberikan Layanan Produk dan Jasa Terbaik</p>
-								</div>
-							</div> </article>
-						<article style="position: absolute; width: 100%; opacity: 0;">
-							<div class="banner-wrap">
-								<div class="banner-info1">
-									<p>Kepuasan Konsumen Adalah Tujuan Utama Kami</p>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-					<script src="<?php echo base_url('js/jquery.wmuSlider.js');?>"></script>
-					<script>
-						$('.example1').wmuSlider();
-					</script>
-			</div>
+			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Account</a></li>
+				<li class="active">Order</li>
+			</ol>
 		</div>
 	</div>
-<!-- //banner -->
-<!-- banner-bottom -->
-	<div class="banner-bottom">
-		<div class="container">
-			<div class="banner-bottom-grids">
-				<div class="banner-bottom-grid-left animated wow slideInLeft" data-wow-delay=".5s">
-					<div class="grid">
-						<figure class="effect-julia">
-							<img src="<?php echo base_url('images/a1.jpg');?>" alt=" " class="img-responsive" />
-							<a href="<?php echo base_url().'index.php/CustControl/show_paket_kon';  ?>">
-							<figcaption>
-								<h3>Paket <span>Tombak</span><i> Konvensional</i></h3>
-								<div>
-									<p>Splitzen Tembaga</p>
-									<p>Pipa Penyangga Splitzer</p>
-									<p>And More...</p>
-								</div>
-							</figcaption>
-							</a>
-						</figure>
-					</div>
-				</div>
-				<div class="banner-bottom-grid-left1 animated wow slideInUp" data-wow-delay=".5s">
-					<div class="banner-bottom-grid-left-grid left1-grid grid-left-grid1">
-						<a href="<?php echo base_url().'index.php/CustControl/show_detail/el_thomas';?>">
-						<div class="banner-bottom-grid-left-grid1">
-							<img src="<?php echo base_url('images/a4.jpg');?>"  alt=" " class="img-responsive" />
-						</div>
-						</a>
-						<a href="<?php echo base_url().'index.php/CustControl/show_detail/el_thomas';?>">
-							<div class="banner-bottom-grid-left1-position">
-								<div class="banner-bottom-grid-left1-pos1">
-								<p><font color = "orange">Paket Thomas</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="banner-bottom-grid-left-grid left1-grid grid-left-grid1">
-						<div class="banner-bottom-grid-left-grid1">
-							<a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent35';?>">
-							<img src="<?php echo base_url('images/a5.jpg');?>"  alt=" " class="img-responsive" />
-							</a>
-						</div>
-						<a href="<?php echo base_url().'index.php/CustControl/show_detail/el_gent35';?>">
-						<div class="banner-bottom-grid-left1-position">
-							<div class="banner-bottom-grid-left1-pos1">
-								<p><font color = "orange">Paket Gent T35 Meter</p>
-							</div>
-						</div>
-						</a>
-					</div>
-				</div>
-				<div class="banner-bottom-grid-right animated wow slideInRight" data-wow-delay=".5s">
-					<div class="banner-bottom-grid-left-grid grid-left-grid1">
-						<div class="banner-bottom-grid-left-grid1">
-							<a href="<?php echo base_url().'index.php/CustControl/show_detail/el_viking70';?>">
-								<img src="<?php echo base_url('images/a3.jpg');?>" alt=" " class="img-responsive" />
-							</a>
-						</div>
-						<a href="<?php echo base_url().'index.php/CustControl/show_detail/el_viking70';?>">
-						<div class="grid-left-grid1-pos">
-							<p>Paket VIKING <span>V3 70 Meter</span></p>
-						</div>
-						</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
+<!-- //breadcrumbs -->
+<!--typography-page -->
+<div class="typo">
+	<div class="container">
+		<div class="typo-grids">
+			<div class="page-header animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+				<h3 class="bars">Order</h3>
 			</div>
-		</div>
-	</div>
-<!-- //banner-bottom -->
-<!-- footer -->
 
-<section id=footer>
-<div class="footer">
+			<div class="bs-docs-example animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+						
+						  <th>Nama Paket</th>
+						  <th>Tanggal Order</th>
+						  <th>Harga Total</th>
+						  <th>Status</th>
+						  <th></th>
+						</tr>
+					</thead>
+					<tbody>
+					<?php foreach($order as $or){ ?>
+						<tr>
+						  
+						  <td><?php echo $or->nama_pkt ?></td>
+						  <td><?php echo $or->tanggal_order ?></td>
+						  <td><?php $harga = $or->harga_total;
+						  			echo "Rp. ".number_format($harga);
+						  ?></td>
+						  <td><?php echo $or->status ?></td>
+						  <td><a href="<?php
+						  		$status = $or->status;
+                                if ($status == 'Survey'){
+                                    echo base_url().'index.php/CustControl/cancel_order/'.$or->no_order.'/Batal';
+                                }else {
+                                 echo "#";
+                                }
+
+						  		?>">
+
+								<span class="label label-warning">Batalkan</span></a>
+						 </td>
+						</tr>
+					<?php } ?>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- //typography-page -->
+<!-- footer -->
+	<div class="footer">
 	<div class="container">
 		<div class="footer-grids">
 			<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
@@ -303,8 +250,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 </div>
-</div>
-</section>
 <!-- //footer -->
 </body>
 </html>

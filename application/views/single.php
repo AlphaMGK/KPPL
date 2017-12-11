@@ -11,7 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Panah Cakrawala</title>
+<title>Panah Cakrawala || Detail Paket</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -129,12 +129,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="header-right">
 					<div class="box_1">
 						<a href="#">
-							<h3> <div >
-								<img src="<?php echo $this->session->userdata('usericon') ;?>" alt="" />
-								<?php echo $this->session->userdata('first_name') ." ". $this->session->userdata('last_name'); ?></div>
+							<h3> 
+								<div >
+									
+									
+									<ul class="dropdown">
+										<img src="<?php echo $this->session->userdata('usericon') ;?>" alt="" />
+
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #d8703f"><?php echo $this->session->userdata('first_name') ." ". $this->session->userdata('last_name'); ?><b class="caret"></b></a>
+										
+										
+										<li class="dropdown-menu"><a href="<?php if(isset($this->session->userdata['userid'])){echo base_url().'index.php/CustControl/show_status'; } ?>" style="color: #d8703f"><?php if(isset($this->session->userdata['userid'])){echo "Order"; } ?></a></li>
+										
+									</ul>
+									
+
+								</div>
 							</h3>
 						</a>
 						<p><a href="<?php echo base_url().'index.php/custManager/logout' ;?>" class="simpleCart_empty"><?php echo $this->session->userdata('logout') ;?></a></p>
+						<a href="<?php echo base_url().'index.php/custManager/login';?>">
+						<h4><?php if (!isset($this->session->userdata['userid'])) echo 'Login' ?></h4>
+						</a>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -221,10 +237,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h3><?php echo $nama_pkt ?></h3>
 					<h4><span class="item_price">
 					<?php 
-					if($kategori_pkt == 'Elektrostatis'){
-					echo $harga_pkt; } else {
+					
 						echo "Rp. ".number_format($harga_pkt);
-					}
+					
 					?>
 					</h4>
 					<div class="description">

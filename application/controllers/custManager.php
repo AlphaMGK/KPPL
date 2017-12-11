@@ -5,8 +5,8 @@ class CustManager extends CI_Controller {
 		parent::__construct();
 		$this->load->model('customer');
 		$this->load->helper(array('form','url'));
-		
-
+		$this->load->library('email');
+	
 	}
 
 	function index(){
@@ -15,8 +15,14 @@ class CustManager extends CI_Controller {
 	}
 
 	function login() {
-		$data['err_message'] = "";
-		$this->load->view('login', $data);
+		if(!isset($this->session->userdata['userid'])){
+			$data['err_message'] = "";
+			$this->load->view('login', $data);
+
+		}else{
+			redirect('custManager/index');
+		}
+		
 	}
 
 	function do_login(){
@@ -106,9 +112,91 @@ class CustManager extends CI_Controller {
 
 	}
 
+
+	
+
+	function input_email(){
+		$this->load->view('send_mail');
+	}
+
+
+	function send_mail($email){
+		
+		$this->load->library('email');
+		$get = get_instance();
+        $config['protocol'] = "smtp";
+        $config['smtp_host'] = "ssl://smtp.gmail.com";
+        $config['smtp_port'] = "465";
+        $config['smtp_user'] = "panahcakrawala2@gmail.com";
+        $config['smtp_pass'] = "cakra12345";
+        $config['charset'] = "utf-8";
+        $config['mailtype'] = "html";
+        $config['newline'] = "\r\n";
+
+
+        $this->email->initialize($config);
+       
+		$this->email->to($email);
+		$this->email->from('panahcakrawala2@gmail.com','Penangkal Petir Panah Cakrawala');
+		$this->email->subject('Ganti Password');
+		$data = array( 'email' => $email);
+
+		$this->email->message($this->load->view('email_template', $data, true));
+		
+		$this->email->send();
+		//$sent = $this->email->send();
+		//var_dump($sent);
+		
+	}
+
+
+
+	function forget_password(){
+		$email = $this->input->post('email');
+		$cekEmail = $this->customer->cek_email($email);
+		
+		if ($cekEmail == true){
+			$this->send_mail($email);
+			$this->set_sess($email);
+		}
+
+		redirect('custManager/index');
+
+	}
+
+	function set_sess($email){
+		$this->session->set_userdata($email);
+	}
+
+	function form_password(){
+		$this->load->view('input_pass');
+	}
+
+	function update_password(){
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[8]|max_length[20]|alpha_numeric');
+		$this->form_validation->set_rules('conpassword','Konfirmasi Password', 'required|matches[password]');
+
+		$email = $this->session->userdata('email');
+
+		if ($this->form_validation->run() !== FALSE){
+			$password = $this->input->post('password');
+			$data = array(
+				'password' => sha1($password)
+				
+			);
+			$this->customer->update_password('users',$email,$data);
+			$this->login();
+        }else{
+        	$this->load->view('input_pass');
+
+        }
+	}
+
+
+
+	
+
+
 }
-
-
-
 
 ?>

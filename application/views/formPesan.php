@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html>
 <head>
-<title>Daftar</title>
+<title>Pesan Paket</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -37,14 +37,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //animation-effect -->
 </head>
 
-<body>
+<body onload="initialize()">
 <!-- header -->
 	<div class="header">
 		<div class="container">
 			<div class="header-grid">
 				<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
 					<ul>
-						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">panahcakrawala@gmail.com</a></li>
+						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:panahcakrawala@gmail.com">panahcakrawala@gmail.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>082 <span>331</span> <span>468</span> 555</li>
 					</ul>
 				</div>
@@ -153,12 +153,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Form Pesan</h3>
 			<p class="est">Silahkan tuliskan kebutuhan dan kriteria bangunan anda yang akan dipasang dengan paket yang tersedia.</p>
 			<div class="mail-grids">
+				<input type="hidden" id="id_paket" value="<?php echo $id; ?>">
+				<input type="hidden" id="base_url" value="<?php echo base_url(); ?>">
+				<input type="hidden" id="hargadasar" value="<?php echo $harga; ?>">
 				<div class="col-md-8 mail-grid-left animated wow slideInLeft" data-wow-delay=".5s">
 					<form action="<?php echo base_url().'index.php/CustControl/do_order/'.$kategori.'/'.$id?>" method="post" enctype="multipart/form-data">
 						<input type="text" value="Luas Bangunan.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Luas Bangunan..';}" name="luas" required="">
 						<br>
 						<br>
-						<input type="text" value="Tinggi Bangunan.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tinggi Bangunan..';}" name="tinggi" required="">
+						<input type="text" value="Tinggi Bangunan (meter).." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tinggi Bangunan (meter)..';}" name="tinggi" id="tinggi" required="">
 						<br>
 						<br>
 						<select name="tanah" id="country" class="frm-field required sect" required="" >
@@ -168,16 +171,56 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<option value="Tanah Liat">Tanah Liat</option>
 						</select>
 						<!--<input type="text" value="Jenis Tanah Bangunan.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Jenis Tanah Bangunan..';}" name="tanah" required="">-->
-						<textarea type="text" value="Alamat tujuan" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Alamat tujuan..';}" name="alamat" required="">Alamat Tujuan..</textarea>
+                		<input type="text" value="alamat.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Alamat..';}" name="alamat" id="alamat" />
+                		<input type="text" value="kota.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Kota..';}" name="city" id="city" />
+                		<select name="provinsi" id="provinsi" class="frm-field required sect" required="" >
+							<option value="null">Provinsi</option>
+							<option value="Banten">Banten</option>
+							<option value="Jakarta">DKI Jakarta</option>
+							<option value="Jabar">Jawa Barat</option>
+							<option value="Jateng">Jawa Tengah</option>
+							<option value="Jatim">Jawa Timur</option>
+							<option value="Jogjakarta">Jogjakarta</option>
+						</select>
+                		<!-- <input type="button" value="Calculate Route" onclick="calcRoute()" /> -->
+            			</p>
+			            <p>
+			                <label for="distance">Distance (km): </label>
+			                <input type="text" name="distance" id="distance" readonly="true" />
+			            </p>
+			            <p>
+			                <input type="button" value="Calculate Price" id="btn_hitung"/>
+			            </p>
+						<p>
+			                <label for="harga" name="">Harga total: </label>
+			                <input type="text" name="harga" id="harga" readonly="true" />
+			            </p>
+						<!-- <textarea type="text" value="Alamat tujuan" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Alamat tujuan..';}" name="alamat" required="">Alamat Tujuan..</textarea> -->
 						<br>Upload Foto
-						<input type="file" name="image">
+						<input type="file" name="image" id="image_upload">
+						<script type="text/javascript">
+							$('#inputFile').bind('change', function(e) {
+      							var data = e.originalEvent.target.files[0];
+        						// var img_size = document.getElementById("image_upload").files[0].size/1024/1024;
+        						var img_size = data.size/1024/1024;
+        						console.log(img_size);
+        						var img_upload = document.getElementById("image_upload").value="";
+        						var max_size = 2;
+        						if(img_size>max_size){
+            						window.alert('Batas maksimal file yang dapat diupload sebesar 2 MB');
+            						img_upload.value = "";
+            					}
+            				});
+        						// alert("Ukuran File: " +this.files[0].size/1024/1024);
+    					</script>
+
 						<br>
 						<input type="submit" value="Order" >
-
 					</form>
-				</div>
+				</div>				
 				<div class="col-md-4 mail-grid-right animated wow slideInRight" data-wow-delay=".5s">
-					<div class="mail-grid-right1">
+					<div style="width:300px; height:400px " id="map_canvas"></div>
+					<!-- <div class="mail-grid-right1">
 						<img src="<?php echo base_url('images/account.jpg');?>" alt=" " class="img-responsive" />
 						<h4>CV. Panah Cakrawala <span>Surabaya</span></h4>
 						<ul class="phone-mail">
@@ -185,7 +228,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email: <a href="#">panahcakrawala@gmail.com</a></li>
 						</ul>
 
-					</div>
+					</div> -->
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -229,4 +272,70 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //footer -->
 </body>
+<!-- hitung jarak-->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBjUEEcKihR6QltJJGHdDwNjZd4ak7mnlo"></script>
+<script type="text/javascript">
+
+        var directionDisplay;
+        var map;
+        var jarak;
+        // var hargadasar = document.getElementById("harga_dasar").value;
+
+        function initialize() {
+            directionsDisplay = new google.maps.DirectionsRenderer();
+            var office = new google.maps.LatLng(-7.278346, 112.792559);
+            var myOptions = {
+                zoom:12,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: office
+            }
+
+            map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+            directionsDisplay.setMap(map);
+        }
+
+        function hitung() {
+            var start = new google.maps.LatLng(-7.278346, 112.792559);
+            var alamat = document.getElementById("alamat").value;
+            var kota = document.getElementById("city").value;
+            var provinsi = document.getElementById("provinsi").value;
+            var location = alamat +" " +kota +" " +provinsi;
+            var distanceInput = document.getElementById("distance");
+            var id_paket = document.getElementById("id_paket").value;
+	        var baseurl = document.getElementById("base_url").value;
+    	    var tinggi = document.getElementById("tinggi").value;
+        	var hargadasar = document.getElementById("hargadasar").value;
+        	var hargatotalInput = document.getElementById("harga");
+        	var directionsService = new google.maps.DirectionsService();
+            var request = {
+                    origin:start,
+                    destination:location,
+                    travelMode: google.maps.DirectionsTravelMode.DRIVING
+            };
+            directionsService.route(request, function(response, status) {
+            	console.log("POINT1");
+                if (status == google.maps.DirectionsStatus.OK) {
+                	console.log("POINT2");
+                    directionsDisplay.setDirections(response);
+                    if(kota=="surabaya"){
+                    	jarak = 0;
+                    }else{
+                        jarak = response.routes[0].legs[0].distance.value / 1000;
+                    }
+                    console.log("JARAK: " +jarak);
+                    distanceInput.value = jarak;
+                    var hargatotal = (parseInt(jarak)*5000)+(parseInt(tinggi)*25000)+parseInt(hargadasar);
+					hargatotalInput.value = hargatotal;;
+                }
+            });
+		}
+
+        $(document).ready(function(){
+    		$('#btn_hitung').click(function(){
+				event.preventDefault();
+				hitung();
+			});
+		});
+    </script>
+<!-- //hitung jarak-->
 </html>

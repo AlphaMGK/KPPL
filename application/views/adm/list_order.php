@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">Admin Panel</a>
+                    <a class="brand" href="#">Admin Panah Cakrawala</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
                             <li class="dropdown">
@@ -45,7 +45,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             
                             <li class="active">
                                 <a href="#" role="button" >Order </i></a>
-                                
+
+                            </li>
+                             
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Paket<b class="caret"></b>
+
+                                </a>
+                                <ul class="dropdown-menu" id="menu1">
+                                    <li>
+                                        <a href="<?php echo base_url().'index.php/admControl/show_paket/konvensional';?>">Konvensional</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo base_url().'index.php/admControl/show_paket/elektrostatis';?>">Elektrostatis</a>
+                                    </li>
+                                    
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -71,15 +86,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						              <thead>
 						                <tr>
                                           <th>Tanggal</th>
-						                  <th>Order Paket</th>
-						                  <th>Alamat Lokasi</th>
-                                          <th>Luas Gedung</th>
-                                          <th>Tinggi Gedung</th>
-                                          <th>Jenis Tanah</th>
+						                              <th>Order Paket</th>
                                           <th>Foto Gedung</th>
-                                          <th>Email</th>
-                                          <th>Nomer Telepon</th>
-                                          <th>Status Penawaran</th>
+						                              <th>Alamat Lokasi</th>
+                                          <th>Spesifikasi Gedung</th>
+                                          <th>Kontak Customer</th>
+                                          <th>Harga Total</th>
+                                          <th>Status Order</th>
                                           <th>Delete</th>
 						                </tr>
 						              </thead>
@@ -89,26 +102,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         foreach($order as $ord){ ?>
 						                <tr class="error">
                                           <td><?php echo $ord->tanggal_order ?></td>
-						                  <td><?php echo $ord->kode_paket ?></td>
-						                  <td><?php echo $ord->alamat ?></td>
-						                  <td><?php echo $ord->luas ?></td>
-                                          <td><?php echo $ord->tinggi ?></td>
-                                          <td><?php echo $ord->tanah ?></td>
+						                              <td><?php echo $ord->kode_paket ?></td>
                                           <td><img style="height: 85px ; width:100px" src="<?php echo base_url('order/'.$ord->image) ?>"></td>
-                                          <td><?php echo $ord->email ?></td>
-                                          <td><?php echo $ord->notelp?></td>
-                                          <td><?php 
-                                                if($ord->validasi==0){
-                                                   
-
-                                                    echo "<a href=".base_url().'index.php/admControl/validasiOrder/'.$ord->no_order."><button class='btn btn-primary'>Belum</button></a>";
-                                                }else{
-                                                    
-                                                    echo "<a href=''><button class='btn'>Sudah</button></a>";
-
-                                                }
-                                          ?> 
-
+                                          <td><?php echo $ord->alamat;  ?></td>
+                                          <td>
+                                              <ul>
+                                                  <li>Luas Bangunan: <?php echo $ord->luas ?></li>
+                                                  <li>Tinggi Bangunan: <?php echo $ord->tinggi ?></li>
+                                                  <li>Jenis Tanah: <?php echo $ord->tanah ?></li>
+                                              </ul>
+                                          </td>
+                                          <td>
+                                              <ul>
+                                                  <li>Email: <?php echo $ord->email ?></li>
+                                                  <li>No Telpon: <?php echo $ord->notelp?></li>
+                                              </ul>
+                                          </td>
+						                              <td> <?php echo $ord->harga_total?> </td>
+                                          <td>
+                                          <div class="btn-group pull-right">
+                                            <button data-toggle="dropdown" class="btn dropdown-toggle"><?php echo $ord->status ?><span class="caret"></span></button>
+                                                <ul class="dropdown-menu">
+                                                  <li><a href="<?php echo base_url().'index.php/admControl/update_status/'.$ord->no_order.'/Survey';?>">Survey</a></li>
+                                                   <li><a href="<?php echo base_url().'index.php/admControl/update_status/'.$ord->no_order.'/Pengerjaan';?>">Pengerjaan</a></li>
+                                                   <li><a href="<?php echo base_url().'index.php/admControl/update_status/'.$ord->no_order.'/Selesai';?>">Selesai</a></li>
+                                                   <li><a href="<?php 
+                                                                    $status = $ord->status;
+                                                                    if ($status == 'Survey'){
+                                                                          echo base_url().'index.php/admControl/update_status/'.$ord->no_order.'/Batal';
+                                                                    }else {
+                                                                      echo "#";
+                                                                    }
+                                                                ?>"
+                                                        >Batal</a>
+                                                    </li>
+                                              </ul>
+                                            </div>
                                           </td>
                                           <td> <a href="<?php echo base_url().'index.php/admControl/deleteOrder/'.$ord->no_order;?>"><button  class='btn btn-primary'>Delete</button></a></td>
 						                </tr>

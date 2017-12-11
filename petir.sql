@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08 Des 2017 pada 08.14
+-- Generation Time: 09 Des 2017 pada 07.05
 -- Versi Server: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -62,23 +62,24 @@ CREATE TABLE `order_paket` (
   `tanah` text NOT NULL,
   `image` varchar(50) NOT NULL,
   `kode_paket` varchar(20) NOT NULL,
-  `validasi` tinyint(1) NOT NULL
+  `validasi` tinyint(1) NOT NULL,
+  `harga_total` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `order_paket`
 --
 
-INSERT INTO `order_paket` (`no_order`, `tanggal_order`, `email`, `notelp`, `alamat`, `luas`, `tinggi`, `tanah`, `image`, `kode_paket`, `validasi`) VALUES
-(5, '0000-00-00', 'mail@coba.com', '0', 'AFF', 1234, 12, 'AD', 'heels_wanita.jpg', 'kon_1', 1),
-(7, '0000-00-00', 'deejansonana@gmail.com', '0', 'dladjd', 1111, 11111111, 'jaja', 'auricular-phone-symbol-in-a-circle.png', 'kon_1', 1),
-(12, '0000-00-00', 'deejansonana@gmail.com', '0', 'nfd', 12, 5, 'mdsf', 'school.png', 'el_gent150', 1),
-(19, '2017-05-22', 'deejansonana@gmail.com', '812222', 'jalan', 12, 1233, 'tahu', 'line-logo.png', 'kon_2', 0),
-(20, '2017-05-22', 'deejansonana@gmail.com', '812222', 'huuuu', 24, 45, 'jaka', 'teacher-md.png', 'kon_3', 1),
-(21, '2017-05-22', 'mail@coba.com', '7319', 'djhja', 12, 7, 'Gambut', '16408-NQR77F.jpg', 'el_gent150', 1),
-(22, '2017-05-31', 'mar@mail.com', '489569258', 'sby', 6, 13, 'Gambut', 'EER1.png', 'el_gent35', 0),
-(23, '2017-05-31', 'mar@mail.com', '489569258', 'byja', 1, 1, 'Pasir', 'EER2.png', 'el_gent150', 1),
-(32, '2017-12-05', 'dumdum@gmail.com', '12345678909', 'sidoarjo', 9, 9, 'Gambut', 'teacher-md1.png', 'el_gent35', 0);
+INSERT INTO `order_paket` (`no_order`, `tanggal_order`, `email`, `notelp`, `alamat`, `luas`, `tinggi`, `tanah`, `image`, `kode_paket`, `validasi`, `harga_total`) VALUES
+(5, '0000-00-00', 'mail@coba.com', '0', 'AFF', 1234, 12, 'AD', 'heels_wanita.jpg', 'kon_1', 1, 0),
+(7, '0000-00-00', 'deejansonana@gmail.com', '0', 'dladjd', 1111, 11111111, 'jaja', 'auricular-phone-symbol-in-a-circle.png', 'kon_1', 1, 0),
+(12, '0000-00-00', 'deejansonana@gmail.com', '0', 'nfd', 12, 5, 'mdsf', 'school.png', 'el_gent150', 1, 0),
+(19, '2017-05-22', 'deejansonana@gmail.com', '812222', 'jalan', 12, 1233, 'tahu', 'line-logo.png', 'kon_2', 0, 0),
+(20, '2017-05-22', 'deejansonana@gmail.com', '812222', 'huuuu', 24, 45, 'jaka', 'teacher-md.png', 'kon_3', 1, 0),
+(21, '2017-05-22', 'mail@coba.com', '7319', 'djhja', 12, 7, 'Gambut', '16408-NQR77F.jpg', 'el_gent150', 1, 0),
+(22, '2017-05-31', 'mar@mail.com', '489569258', 'sby', 6, 13, 'Gambut', 'EER1.png', 'el_gent35', 0, 0),
+(23, '2017-05-31', 'mar@mail.com', '489569258', 'byja', 1, 1, 'Pasir', 'EER2.png', 'el_gent150', 1, 0),
+(32, '2017-12-05', 'dumdum@gmail.com', '12345678909', 'sidoarjo', 9, 9, 'Gambut', 'teacher-md1.png', 'el_gent35', 0, 0);
 
 -- --------------------------------------------------------
 

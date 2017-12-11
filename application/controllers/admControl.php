@@ -8,12 +8,12 @@ class AdmControl extends CI_Controller {
 		$this->load->helper(array('form','url'));
 		if (!$this->session->userdata('adminid'))
         {
-            redirect('admLogin/login');
+            redirect('admManager/view_login');
         } 
 	}
 
 	public function index(){
-		$this->load->view('adm/index');
+		$this->load->view('adm/list_order');
 	}
 	
 
@@ -33,26 +33,37 @@ class AdmControl extends CI_Controller {
 		redirect('admControl/showListOrder');
 	}
 	
-	function validasiOrder($id){
+	function update_status($id,$status){
 
 		$data_update = array(
-			'validasi' => 1
+			'status' => $status
 			);
 		$where = array('no_order' => $id);
-		$this->order->validate('order_paket',$where,$data_update);
+		$this->order->update_status('order_paket',$where,$data_update);
 
 		redirect('admControl/showListOrder');
 		
 	}
 
-	function form () {
+	function form_tambah () {
 		$this->load->view('adm/create_paket');
 	}
 
 
+	function show_paket($kategori){
+		$where = array('kategori_pkt' => $kategori);
+
+		$data['paket'] = $this->paket->get_paket('paket', $where)->result();
+
+		$this->load->view('adm/list_paket',$data);
+
+
+	}
+	
+
 	function tambah_paket(){
 
-			/*$this->load->library('upload');
+			$this->load->library('upload');
 			$fileUpload = array();
 
 			$fileGambar = array(
@@ -64,7 +75,7 @@ class AdmControl extends CI_Controller {
 
 			if ($this->upload->do_upload('gambar_pkt')) {
 
-				$fileUpload= $this->upload->data();*/
+				$fileUpload= $this->upload->data();
 
 				
 				$id_pkt = $this->input->post('id_pkt');
@@ -72,7 +83,7 @@ class AdmControl extends CI_Controller {
 				$kategori_pkt = $this->input->post('kategori_pkt');
 				$deskripsi_pkt = $this->input->post('deskripsi_pkt');
 				$harga_pkt = $this->input->post('harga_pkt');
-				//$gambar_pkt = $fileUpload['file_name'];
+				$gambar_pkt = $fileUpload['file_name'];
 
 
 				$data = array(
@@ -81,16 +92,16 @@ class AdmControl extends CI_Controller {
 					'nama_pkt' => $nama_pkt,
 					'kategori_pkt' => $kategori_pkt,
 					'deskripsi_pkt' => $deskripsi_pkt,
-					'harga_pkt' => $harga_pkt
-					//'gambar_pkt' => $gambar_pkt
+					'harga_pkt' => $harga_pkt,
+					'gambar_pkt' => $gambar_pkt
 					
 
 				);
 
 				$this->paket->insert_paket('paket',$data);
 				
-				redirect('admControl/index');
-			//}
+				redirect('admControl/show_paket/'.$kategori_pkt);
+			}
 
 		
 
@@ -101,7 +112,7 @@ class AdmControl extends CI_Controller {
 
 	function show_data($id_pkt){
 		$where = array('id_pkt' => $id_pkt);
-		$paket = $this->paket->get_paket('paket',$where);
+		$paket = $this->paket->get_paket('paket',$where)->result_array();
 		$data = array(
 			'id_pkt' => $paket[0]['id_pkt'],
 			'nama_pkt' => $paket[0]['nama_pkt'],
@@ -120,7 +131,7 @@ class AdmControl extends CI_Controller {
 
 	function update_data(){
 
-		/*$this->load->library('upload');
+		$this->load->library('upload');
 		$fileUpload = array();
 
 		$fileGambar = array(
@@ -128,10 +139,10 @@ class AdmControl extends CI_Controller {
 				'allowed_types' => 'gif|jpg|png'
 		);
 
-		$this->upload->initialize($fileGambar);*/
+		$this->upload->initialize($fileGambar);
 		
-		//if($this->upload->do_upload('gambar_pkt')){
-			//$fileUpload= $this->upload->data();
+		if($this->upload->do_upload('gambar_pkt')){
+			$fileUpload= $this->upload->data();
 
 
 			$id_pkt = $this->input->post('id_pkt');
@@ -139,7 +150,7 @@ class AdmControl extends CI_Controller {
 			$kategori_pkt = $this->input->post('kategori_pkt');
 			$deskripsi_pkt = $this->input->post('deskripsi_pkt');
  			$harga_pkt = $this->input->post('harga_pkt');
-			//$gambar_pkt = $fileUpload['file_name'];
+			$gambar_pkt = $fileUpload['file_name'];
 		
  			$data = array(
 					
@@ -147,8 +158,8 @@ class AdmControl extends CI_Controller {
 					'nama_pkt' => $nama_pkt,
 					'kategori_pkt' => $kategori_pkt,
 					'deskripsi_pkt' => $deskripsi_pkt,
-					'harga_pkt' => $harga_pkt
-					//'gambar_pkt' => $gambar_pkt
+					'harga_pkt' => $harga_pkt,
+					'gambar_pkt' => $gambar_pkt
 					
 
 				);
@@ -157,15 +168,15 @@ class AdmControl extends CI_Controller {
 			$this->paket->update_paket('paket',$where,$data);
 
 		redirect('admControl/index');
-		//}
+		}
 
 	}
 
-	function delete_paket($id_pkt){
+	function delete_paket($kategori_pkt,$id_pkt){
 		$where = array('id_pkt' => $id_pkt);
 		$this->paket->delete_paket('paket',$where);
-		
-		//redirect('insertread/read');
+
+		redirect('admControl/show_paket/'.$kategori_pkt);
 	}
 
 }

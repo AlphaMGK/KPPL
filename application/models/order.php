@@ -11,7 +11,7 @@
 
 		function get_order(){
 
-		$sql = "SELECT * FROM order_paket ORDER BY tanggal_order, validasi";
+		$sql = "SELECT * FROM order_paket ORDER BY tanggal_order";
 		return $this->db->query($sql);
 
 		}
@@ -22,9 +22,21 @@
 
 		}
 
-		function validate($table,$where,$data){
+		function update_status($table,$where,$data){
 			
 		$this->db->update($table,$data,$where);
+
+		}
+
+		function get_status($email){
+			
+			
+
+			//$sql =  "select * from order_paket where email = '$email' ORDER BY tanggal_order";
+			$sql = "SELECT order_paket.no_order, order_paket.harga_total, order_paket.status, paket.nama_pkt, order_paket.tanggal_order FROM order_paket INNER JOIN paket ON order_paket.kode_paket=paket.id_pkt WHERE email = '$email' ORDER BY tanggal_order";
+
+			$data = $this->db->query($sql);
+			return $data;
 
 		}
 	

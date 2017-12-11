@@ -27,101 +27,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">Admin Panel</a>
+                    <a class="brand" href="#">Admin Panah Cakrawala</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
                             <li class="dropdown">
-                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> Vincent Gabriel <i class="caret"></i>
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i>  <?php echo $this->session->userdata("username"); ?>  <i class="caret"></i>
 
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a tabindex="-1" href="#">Profile</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a tabindex="-1" href="login.html">Logout</a>
+                                        <a tabindex="-1" href="<?php echo base_url().'index.php/admManager/logout';?>">Logout</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                         <ul class="nav">
-                            <li class="active">
-                                <a href="#">Dashboard</a>
+                            
+                            <li class="unactive">
+                                <a href="<?php echo base_url().'index.php/admControl/showListOrder';?>" role="button" >Order </i></a>
+
                             </li>
+                             
                             <li class="dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Settings <b class="caret"></b>
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Paket<b class="caret"></b>
 
                                 </a>
                                 <ul class="dropdown-menu" id="menu1">
                                     <li>
-                                        <a href="#">Tools <i class="icon-arrow-right"></i>
-
-                                        </a>
-                                        <ul class="dropdown-menu sub-menu">
-                                            <li>
-                                                <a href="#">Reports</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Logs</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Errors</a>
-                                            </li>
-                                        </ul>
+                                        <a href="<?php echo base_url().'index.php/admControl/show_paket/konvensional';?>">Konvensional</a>
                                     </li>
                                     <li>
-                                        <a href="#">SEO Settings</a>
+                                        <a href="<?php echo base_url().'index.php/admControl/show_paket/elektrostatis';?>">Elektrostatis</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Other Link</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="#">Other Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Other Link</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Content <i class="caret"></i>
-
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a tabindex="-1" href="#">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="#">News</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="#">Custom Pages</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="#">Calendar</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a tabindex="-1" href="#">FAQ</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Users <i class="caret"></i>
-
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a tabindex="-1" href="#">User List</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="#">Search</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="#">Permissions</a>
-                                    </li>
+                                    
                                 </ul>
                             </li>
                         </ul>
@@ -222,102 +160,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- /block -->
                     </div>
 	            <!-- /wizard -->
-
+                    <div class="span11">
                      <!-- validation -->
-                    <div class="row-fluid">
+                    <div class="row-fluid" >
                          <!-- block -->
+                         
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">Tambahkan Paket</div>
+                              <strong>  <div class="muted pull-left">Edit Paket</div> </strong>
                             </div>
                             <div class="block-content collapse in">
                                 <div class="span12">
-					<!-- BEGIN FORM-->
-					<form action="<?php echo base_url().'index.php/admControl/tambah_paket';?>" id="form_sample_1" class="form-horizontal" method="post">
-					
-							
-  							<div class="control-group">
-  								<label class="control-label">Kode Paket<span class="required">*</span></label>
-  								<div class="controls">
-  									<input type="text" name="id_pkt" data-required="1" class="span6 m-wrap"/>
-  								</div>
-  							</div>
-  							<div class="control-group">
-  								<label class="control-label">Nama Paket<span class="required">*</span></label>
-  								<div class="controls">
-  									<input name="nama_pkt" type="text" class="span6 m-wrap"/>
-  								</div>
-  							</div>
-  							<div class="control-group">
-  								<label class="control-label">Kategori Paket<span class="required">*</span></label>
-  								<div class="controls">
-                                    <select class="span6 m-wrap" name="kategori_pkt">
-                                        <option value="konven">Konvensional</option>
-                                        <option value="elektro">Elektrostatis</option>
-                                        
-                                    </select>
-                                </div>
-  							</div>
-  							<div class="control-group">
-  								<label class="control-label">Deskripsi<span class="required">*</span></label>
-  								<div class="controls">
-  									<input name="deskripsi_pkt" type="text" class="span6 m-wrap"/>
-  								</div>
-  							</div>
-  							<div class="control-group">
-  								<label class="control-label">Harga<span class="required">*</span></label>
-  								<div class="controls">
-  									<input name="harga_pkt" type="text" class="span6 m-wrap"/>
-  								</div>
-  							</div>
-  							<div class="control-group">
-  								<label class="control-label">Gambar<span class="required">*</span></label>
-  								<div class="controls">
-  									<input name="gambar_pkt" type="file" class="span6 m-wrap"/>
-  								</div>
-  							</div>
-  							
-  							
-  							<div class="form-actions">
-                   <input type="submit" value="Simpan" class="btn btn-primary">
-  								
-  							</div>
-						
-					</form>
-
-
-<form action="<?php echo base_url().'index.php/admControl/update_data';?>" id="form_sample_1" class="form-horizontal" method="post">
+          <!-- BEGIN FORM-->
           
-              
-                  <input type="text" name="id_pkt" data-required="1" class="span6 m-wrap" value="<?php echo $id_pkt;?>" />
-                 
-                  <input name="nama_pkt" type="text" class="span6 m-wrap" value="<?php echo $nama_pkt;?>" />
-                 
-                  <select class="span6 m-wrap" name="kategori_pkt">
-                      <option value="Konvensional"><?php echo $kategori_pkt;?></option>
-                     <option value="Elektrostatis"><?php echo $kategori_pkt;?></option>
+
+        <form action="<?php echo base_url().'index.php/admControl/tambah_paket';?>"  method="post" enctype="multipart/form-data">
+                  <div class="span6">
+                  <label class="control-label">Kode Paket</label>
+                  <input type="text" name="id_pkt" data-required="1" class="span8 m-wrap" value="<?php echo $id_pkt;?>" />
+                  <br>
+                  <label class="control-label">Nama Paket</label>
+                  <input name="nama_pkt" type="text" class="span8 m-wrap" value="<?php echo $nama_pkt;?>"/>
+               
+                  <label class="control-label">Kategori Paket</label>
+                  <select class="span8 m-wrap" name="kategori_pkt">
+                      <option value="Konvensional">Konvensional</option>
+                     <option value="Elektrostatis">Elektrostatis</option>
                   </select>
-                                        
-                  <input name="deskripsi_pkt" type="text" class="span6 m-wrap" value="<?php echo $deskripsi_pkt;?>" />
-                  <input name="harga_pkt" type="text" class="span6 m-wrap" value="<?php echo $harga_pkt;?>" />
-                  
-                  <input name="gambar_pkt" type="file" class="span6 m-wrap"/>
-                  
-                  <input type="submit" value="Simpan" class="btn btn-primary">
-                  
-             
+                  <label class="control-label">Harga Paket</label> 
+                  <input name="harga_pkt" type="text" class="span8 m-wrap" value="<?php echo $harga_pkt;?>"/>
+                 </div>
+
+                 <div class="span6"> 
+                  <label class="control-label">Deskripsi Paket</label> 
+                  <textarea name="deskripsi_pkt" class="span8 m-wrap" cols="12" rows="7" value=""> <?php echo $deskripsi_pkt;?> </textarea>              
+                
+                  <label class="control-label">Gambar Paket</label> 
+                  <input name="gambar_pkt" type="file" class="span8 m-wrap"/>
+                  <br>
+                  <br>
+                  <input type="submit" value="Simpan" class="btn btn-primary">   
+                  </div>       
             
-          </form>
+        </form>
 
 
 
-					<!-- END FORM-->
-				</div>
-			    </div>
-			</div>
-                     	<!-- /block -->
-		    </div>
-                     <!-- /validation -->
+          <!-- END FORM-->
+        </div>
+          </div>
+      </div>
+                      <!-- /block -->
+      </div>
+        </div>                     <!-- /validation -->
 
 
                 </div>

@@ -10,10 +10,15 @@
 		$this->db->update($table,$data,$where);
 	}
 
-		function get_paket($table,$where){
+		/*function get_paket($table,$where){
 		$data = $this->db->get_where($table,$where);
 		return $data->result_array();
-		}
+		}*/
+
+		function get_paket($table,$where){
+		$data = $this->db->get_where($table,$where);
+		return $data;
+	}
 
 
 		function delete_paket($table,$where){
